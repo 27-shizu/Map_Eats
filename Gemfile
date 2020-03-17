@@ -48,9 +48,15 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem install mysql2 -v '0.5.3'
+gem 'bootstrap-sass'
+gem 'bcrypt'
