@@ -1,0 +1,17 @@
+<h1><%= @restaurant_info['name'] %></h1>
+
+<p><strong>住所：</strong><%= @restaurant_info['address']%></p>
+
+<p><strong>最寄駅名:</strong><%= @restaurant_info['station_name']%></p>
+
+<p>
+     <strong>ジャンル：</strong>
+     <% @restaurant_info['genres'].each do |genre| %>
+         <% if genre == @restaurant_info['genre'].last %>
+             <span><%= genre['name'] %></span>
+         <% else %>
+             <span><%= genre['name'] %>、</span>
+         <% end %>
+</p>
+
+<p><strong>ロゴ：</strong><%= @restaurant_info['logo_image'] %></p>
