@@ -22,7 +22,7 @@ h1, h2 {
 .top-hero-wrapper {
     width: 100vw;
     height: 100vh;
-    background-image: url(pizza-3007495_1920.jpg);
+    background-image: url('pizza-3007395_1920.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -66,3 +66,26 @@ h1, h2 {
        height: 40px;
     }
 }
+
+.form-control {
+    height: 45px;
+  }
+  
+  .users-new-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: image-url('pizza-3007395_1920.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+  
+    .users-new-container {
+      padding-top: 220px;
+  
+      .form-group {
+        margin-bottom: 20px;
+      }
+    }
+  }

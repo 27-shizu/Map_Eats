@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy
+  def destory
     log_out
     redirect_to root_url, info: 'ログアウトしました'
   end
@@ -32,7 +32,7 @@ class SessionsController < ApplicationController
     params.require(:session).permit(:email)
   end
 
-  def password_paramas
+  def password_params
     params.require(:session).permit(:password)
   end
 
