@@ -2,13 +2,13 @@
 
 <div>
   <%= form_tag(restaurants_search_path, method: :get) do %>
-    <%= search_foeld_tag :name, nil, placeholder: 'Restaurant Title...' %>
+    <%= search_field_tag :name, nil, placeholder: 'Restaurant Title...' %>
     <%= submit_tag '検索'%>
   <% end %>
 </div>
 
 <div>
-  <% if @restaurant_result.blanck? %>
+  <% if @restaurant_result.blank? %>
     <p>[<%= @search_term %>]と一致する情報が見つかりませんでした</p>
   <% else %>
     <p>[<%= @search_term %>]の検索結果</p>
