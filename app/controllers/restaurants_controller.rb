@@ -6,7 +6,6 @@ class RestaurantsController < ApplicationController
     if @search_term.present?
        @restaurant_results = Restaurant.search(@search_term)
     end
-    byebug.pry
   end
 
   def show
