@@ -4,7 +4,7 @@ class RestaurantsController < ApplicationController
     @restaurant_results = []
 
     if @search_term.present?
-       @restaurant_results = Restaurant.search(@search_term)
+       @restaurant_results = JSON.parse(Restaurant.search(@search_term).body)
     end
   end
 

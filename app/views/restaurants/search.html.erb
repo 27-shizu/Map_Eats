@@ -8,26 +8,28 @@
 </div>
 
 <div>
-  <% if @restaurant_result.blank? %>
+  <% if @restaurant_results.blank? %>
     <p>[<%= @search_term %>]と一致する情報が見つかりませんでした</p>
   <% else %>
     <p>[<%= @search_term %>]の検索結果</p>
     <table border="1">
       <tr>
         <th>店名</th>
+        <th>URL</th>
+        <th>営業時間</th>
         <th>住所</th>
-        <th>最寄駅名</th>
-        <th>お店ジャンル</th>
+        <th>ジャンル</th>
       </tr>
       <% @restaurant_results.each do |restaurant| %>
+      <% restaurant[1]["shop"].each do |shop| %>
         <tr>
-        <td><%= link_to restaurant['name'], id: "#{restaurant["id"]}" %></td>
-        <td><%= restaurant['logo_image']%></td>
-        <td><%= restaurant['address']%></td>
-        <td><%= restaurant['staition_name']%></td>
-        <td><%= restaurant['genre']%></td>
+        <td><%= link_to shop['name'], id: "#{shop["id"]}" %></td>
+        <td><%= shop['urls']%></td>
+        <td><%= shop['open']%></td>
+        <td><%= shop['address']%></td>
+        <td><%= shop['genre']%></td>
         </tr>
-
+      <% end %>
       <% end %>
     </table>
   <%end%>

@@ -6,12 +6,13 @@
 
 <p>
      <strong>ジャンル：</strong>
-     <% @restaurant_info['genres'].each do |genre| %>
+     <% @restaurant_info['genre'].each do |genre| %>
          <% if genre == @restaurant_info['genre'].last %>
              <span><%= genre['name'] %></span>
          <% else %>
              <span><%= genre['name'] %>、</span>
          <% end %>
+     <% end %>
 </p>
 
 <p><strong>ロゴ：</strong><%= @restaurant_info['logo_image'] %></p>
