@@ -63,4 +63,4 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'bcrypt'
 
-gem 'httparty', '0.13.5'
+gem 'httparty', '0.21.0'
